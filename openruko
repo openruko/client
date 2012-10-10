@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# openruko client tool
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export PATH=$DIR/heroku-client/bin:$PATH
+
+# mymachine.me points to 127.0.0.1 - since logic creeped into heroku cli that requires a .
+
+export HEROKU_HOST=${HEROKU_HOST:-http://mymachine.me:5000/}
+export HEROKU_STATUS_HOST=${HEROKU_STATUS_HOST:-"mymachine.me"}
+export HEROKU_SSL_VERIFY=${HEROKU_SSL_VERIFY:-"disable"}
+
+# https://github.com/heroku/heroku/commit/928c010d8b7fdb674770563bbe49d001321cba9f
+export HEROKU_GIT_HOST=${HEROKU_GIT_HOST:-mymachine.me}
+
+exec heroku $*
+
