@@ -1,0 +1,3 @@
+[submodule "heroku-client"]
+	path = heroku-client
+	url = git://github.com/heroku/heroku.git
