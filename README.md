@@ -9,6 +9,9 @@ mymachine.me is convenient for debugging, it points to 127.0.0.1, just like
 localhost, however it is compatible with Heroku client tools - base host requires
 a hostname with . or else errors in recent version of Heroku client tools. 
 
+CHANGE heroku remote to use the ssh protocol insted of the git protocol,
+replace `git@openruko.com` to `ssh://openruko.com:2222` in your .git/config
+
 ## Requirements
 
 Tested on Linux 3.2 using Bash, Heroku CLI (and via dependency - Ruby)
