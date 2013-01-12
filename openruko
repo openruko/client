@@ -10,7 +10,7 @@ unset https_proxy
 
 # mymachine.me points to 127.0.0.1 - since logic creeped into heroku cli that requires a .
 # fixed in https://github.com/heroku/heroku/pull/645
-export HEROKU_HOST=${HEROKU_HOST:-http://mymachine.me:5000/}
+export HEROKU_HOST=${HEROKU_HOST:-mymachine.me:5000}
 export HEROKU_STATUS_HOST=${HEROKU_STATUS_HOST:-"mymachine.me"}
 export HEROKU_SSL_VERIFY=${HEROKU_SSL_VERIFY:-"disable"}
 
